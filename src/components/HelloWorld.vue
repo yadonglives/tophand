@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <div><Button @click="login">Default</Button></div>
     <ul>
       <li>
         <a
@@ -89,6 +90,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods:{
+    login(){
+      this.$router.push({path:'/login'});
     }
   }
 }
